@@ -19,18 +19,18 @@ def cal_daily_wage():
     wage_per_hour = 20
     emp_check = check_attendance()
 
-    if emp_check == 1:
-        daily_wage = wage_per_hour * 8
-        print(f"Employee is present for full day so daily wage is : {daily_wage}")
-    
-    elif emp_check == 2:
-        daily_wage = wage_per_hour*4
-        print(f"Employee is present for half-day so daily wage is : {daily_wage}")
+    match emp_check:
+        case 0:
+         daily_wage = 0
+         print(f"Employee is absent  for full day so daily wage is : {daily_wage}")
 
-    else:
-        daily_wage = 0
-        print(f"Employee is absent  for full day so daily wage is : {daily_wage}")
+        case 1:
+            daily_wage = wage_per_hour * 8
+            print(f"Employee is present for full day so daily wage is : {daily_wage}")
 
+        case 2:
+            daily_wage = wage_per_hour*4
+            print(f"Employee is present for half-day so daily wage is : {daily_wage}")
 
 
 if __name__ =="__main__":
