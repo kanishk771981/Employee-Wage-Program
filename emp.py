@@ -33,8 +33,19 @@ def cal_daily_wage():
             print(f"Employee is present for half-day so daily wage is : {daily_wage}")
 
 
+    return daily_wage
+
+def monthly_wage():
+    total_wage = 0
+    for i in range (20):
+        total_wage = total_wage + cal_daily_wage()
+
+    return total_wage
+
+
 if __name__ =="__main__":
-    cal_daily_wage()
+    monthly_wage()
+    
 
 
 
