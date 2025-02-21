@@ -40,6 +40,8 @@ def monthly_wage():
     for i in range (20):
         total_wage = total_wage + cal_daily_wage()
 
+    print(f"total monthly wage is {total_wage}")
+
     return total_wage
 
 
