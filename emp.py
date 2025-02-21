@@ -13,6 +13,25 @@ def check_attendance():
     else:
         print("The Employee is absent")
 
-if __name__ == "__main__":  # Fixed syntax error
-    check_attendance()
+    return attendance
+
+def cal_daily_wage():
+    wage_per_hour = 20
+    emp_check = check_attendance()
+
+    if emp_check == 1:
+        daily_wage = wage_per_hour * 8
+        print(f"Employee is present for full day so daily wage is : {daily_wage}")
+    
+    else:
+        daily_wage = 0
+        print(f"Employee is present for full day so daily wage is : {daily_wage}")
+
+
+if __name__ =="__main__":
+    cal_daily_wage()
+
+
+
+
 
