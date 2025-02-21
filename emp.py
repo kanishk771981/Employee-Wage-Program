@@ -23,9 +23,14 @@ def cal_daily_wage():
         daily_wage = wage_per_hour * 8
         print(f"Employee is present for full day so daily wage is : {daily_wage}")
     
+    elif emp_check == 2:
+        daily_wage = wage_per_hour*4
+        print(f"Employee is present for half-day so daily wage is : {daily_wage}")
+
     else:
         daily_wage = 0
-        print(f"Employee is present for full day so daily wage is : {daily_wage}")
+        print(f"Employee is absent  for full day so daily wage is : {daily_wage}")
+
 
 
 if __name__ =="__main__":
